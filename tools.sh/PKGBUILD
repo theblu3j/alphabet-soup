@@ -7,7 +7,8 @@ pkgdesc='Personal bash scripts to do various things.'
 arch=('any')
 url='https://github.com/theblu3j/tools.sh'
 license=('GPL3')
-depends=('bash' 'rate-mirrors' 'wine' 'plasma-desktop')
+depends=('bash' 'rate-mirrors')
+optdepends=('plasma-desktop' 'wine')
 makedepends=()
 source=(
     "rate-all.sh::https://raw.githubusercontent.com/theblu3j/tools.sh/refs/heads/main/rate-all.sh"
