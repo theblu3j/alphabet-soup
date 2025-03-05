@@ -1,0 +1,8 @@
+pkgbase = fakev4l2loopback
+	pkgdesc = Fakes existence of v4l2loopback
+	pkgver = 0.1
+	pkgrel = 1
+	arch = any
+	provides = V4L2LOOPBACK-MODULE
+
+pkgname = fakev4l2loopback

@@ -1,13 +1,13 @@
 # Maintainer: Miles Gordon theblu3j@proton.me
 
 pkgname=tools.sh
-pkgver=0.3.3
+pkgver=0.3.4
 pkgrel=1
-pkgdesc='Bash script to rate mirrors.'
+pkgdesc='Personal bash scripts to do various things.'
 arch=('any')
 url='https://github.com/theblu3j/tools.sh'
 license=('GPL3')
-depends=('bash' 'rate-mirrors')
+depends=('bash' 'rate-mirrors' 'wine' 'plasma-desktop')
 makedepends=()
 source=(
     "rate-all.sh::https://raw.githubusercontent.com/theblu3j/tools.sh/refs/heads/main/rate-all.sh"
