@@ -2,7 +2,7 @@
 
 # Edited by me, borne out of a hatred for GTK4
 # Using GTK3-classic and this results in something that looks good in Plasma
-# TODO: Build with donet8.0?
+# Also updated to build with dotnet 8.0, which builds fine for me
 
 # Previous maintainers and contributors from before I edited the PKGBUILD
 # Contributor: NicoHood <archlinux {cat} nicohood {dog} de>
@@ -14,13 +14,13 @@
 
 pkgname='pinta2'
 pkgver=2.1.2
-pkgrel=3
+pkgrel=4
 pkgdesc="Drawing/editing program modeled after Paint.NET. It's goal is to provide a simplified alternative to GIMP for casual users"
 arch=('any')
 url="https://pinta-project.com/"
 license=('MIT')
-depends=('gtk3>=3.24.21' 'dotnet-runtime-6.0' 'webp-pixbuf-loader')
-makedepends=('intltool' 'dotnet-sdk-6.0')
+depends=('gtk3>=3.24.21' 'dotnet-runtime-8.0' 'webp-pixbuf-loader')
+makedepends=('intltool' 'dotnet-sdk-8.0')
 provides=('pinta')
 source=("pinta-${pkgver}.tar.gz::https://github.com/PintaProject/Pinta/releases/download/${pkgver}/pinta-${pkgver}.tar.gz")
 sha512sums=('68b23a1ed9aef3794edd3410d2f7d92ce58ecbd96ec15a20bb263fca397ddd0a850ace32d3fcc291f4f3ab9147c5f40e7d7af249dc9c6fa9304417740fbad798')
