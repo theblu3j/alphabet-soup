@@ -1,0 +1,20 @@
+# Maintainer: https://github.com/theblu3j
+# Created mostly for personal usage.
+
+pkgname=dedupe
+pkgver=0.1
+pkgrel=2
+pkgdesc='Dedupes the home directory once a week, using duperemove'
+arch=('any')
+depends=('btrfs-progs' 'systemd' 'duperemove')
+source=(
+    "dedupe.timer::https://raw.githubusercontent.com/theblu3j/dedupe/refs/heads/main/dedupe.timer"
+    "dedupe.service::https://raw.githubusercontent.com/theblu3j/dedupe/refs/heads/main/dedupe.service"
+)
+sha512sums=('9d7f612606ac64204c9bd646575d079fd67b9a5364ac008416dc94f2cb3a7cc6e11724c7e66e354421787a4b5680b94e06b2a812488850bd9d8e37f8ac28c795'
+            'ff97099a85a7495ee0eca6c7f8a802fc5bcb163afd45fce09a809b076240b6f15a16d246850655ee9d1f717b21a3eb417f7bec09dd162b08abef07157e8b50e3')
+package() {
+    mkdir -p "$pkgdir/usr/lib/systemd/user/"
+    install -Dm644 "$srcdir/dedupe.timer" "$pkgdir/usr/lib/systemd/user/dedupe.timer"
+    install -Dm644 "$srcdir/dedupe.service" "$pkgdir/usr/lib/systemd/user/dedupe.service"
+}
