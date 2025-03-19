@@ -1,4 +1,5 @@
 # Maintainer: https://github.com/theblu3j
+# Created because some custom kernels package v4l2loopback within, making installing v4l2loopback-dkms unneeded
 
 pkgname=fakev4l2loopback
 pkgver=0.1
