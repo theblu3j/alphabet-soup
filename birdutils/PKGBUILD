@@ -1,14 +1,14 @@
 # Maintainer: https://github.com/theblu3j
 
 pkgname=birdutils
-pkgver=0.4.0
-pkgrel=4
+pkgver=0.4.1
+pkgrel=1
 pkgdesc='Personal bash scripts to do various things.'
 arch=('any')
 url='https://github.com/theblu3j/birdutils'
 license=('GPL3')
 depends=('bash' 'rate-mirrors' 'fastfetch')
-optdepends=('plasma-desktop' 'wine')
+optdepends=('plasma-desktop' 'wine' 'steam')
 replaces=('tools.sh')
 provides=('tools.sh')
 conflicts=('rate-all')
@@ -37,27 +37,25 @@ package() {
 
     install -Dm644 "$srcdir/rate-all.sh" "$pkgdir/usr/bin/rate-all"
     chmod +x "$pkgdir/usr/bin/rate-all"
-
     install -Dm644 "$srcdir/start.sh" "$pkgdir/usr/bin/start"
     chmod +x "$pkgdir/usr/bin/start"
-
-    install -Dm644 "$srcdir/winekill.sh" "$pkgdir/usr/bin/winekill"
-    chmod +x "$pkgdir/usr/bin/winekill"
-
-    install -Dm644 "$srcdir/winepause.sh" "$pkgdir/usr/bin/winepause"
-    chmod +x "$pkgdir/usr/bin/winepause"
-
-    install -Dm644 "$srcdir/wineresume.sh" "$pkgdir/usr/bin/wineresume"
-    chmod +x "$pkgdir/usr/bin/wineresume"
-
-    install -Dm644 "$srcdir/restartplasma.sh" "$pkgdir/usr/bin/restartplasma"
-    chmod +x "$pkgdir/usr/bin/restartplasma"
-
     install -Dm644 "$srcdir/center.sh" "$pkgdir/usr/bin/center"
     chmod +x "$pkgdir/usr/bin/center"
-
     install -Dm644 "$srcdir/checkdeps.sh" "$pkgdir/usr/bin/checkdeps"
     chmod +x "$pkgdir/usr/bin/checkdeps"
+    if pacman -Qq wine > /dev/null; then
+        install -Dm644 "$srcdir/winekill.sh" "$pkgdir/usr/bin/winekill"
+        chmod +x "$pkgdir/usr/bin/winekill"
+        install -Dm644 "$srcdir/winepause.sh" "$pkgdir/usr/bin/winepause"
+        chmod +x "$pkgdir/usr/bin/winepause"
+        install -Dm644 "$srcdir/wineresume.sh" "$pkgdir/usr/bin/wineresume"
+        chmod +x "$pkgdir/usr/bin/wineresume"
+    fi
+    if pacman -Qq plasma-desktop > /dev/null; then
+        install -Dm644 "$srcdir/restartplasma.sh" "$pkgdir/usr/bin/restartplasma"
+        chmod +x "$pkgdir/usr/bin/restartplasma"
+    fi
 }
 
 # there is probably a better way to do this, but I'm not going to do that yet
+# if statement in a PKGBUILD is... weird
