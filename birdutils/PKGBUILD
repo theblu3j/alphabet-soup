@@ -1,25 +1,26 @@
 # Maintainer: https://github.com/theblu3j
 
-pkgname=tools
+pkgname=birdutils
 pkgver=0.4.0
 pkgrel=4
 pkgdesc='Personal bash scripts to do various things.'
 arch=('any')
-url='https://github.com/theblu3j/tools'
+url='https://github.com/theblu3j/birdutils'
 license=('GPL3')
 depends=('bash' 'rate-mirrors' 'fastfetch')
 optdepends=('plasma-desktop' 'wine')
 replaces=('tools.sh')
+provides=('tools.sh')
 conflicts=('rate-all')
 source=(
-    "rate-all.sh::https://raw.githubusercontent.com/theblu3j/tools/refs/heads/main/rate-all.sh"
-    "start.sh::https://raw.githubusercontent.com/theblu3j/tools/refs/heads/main/start.sh"
-    "winekill.sh::https://raw.githubusercontent.com/theblu3j/tools/refs/heads/main/winekill.sh"
-    "winepause.sh::https://raw.githubusercontent.com/theblu3j/tools/refs/heads/main/winepause.sh"
-    "wineresume.sh::https://raw.githubusercontent.com/theblu3j/tools/refs/heads/main/wineresume.sh"
-    "restartplasma.sh::https://raw.githubusercontent.com/theblu3j/tools/refs/heads/main/restartplasma.sh"
-    "center.sh::https://raw.githubusercontent.com/theblu3j/tools/refs/heads/main/center.sh"
-    "checkdeps.sh::https://raw.githubusercontent.com/theblu3j/tools/refs/heads/main/checkdeps.sh"
+    "rate-all.sh::https://raw.githubusercontent.com/theblu3j/birdutils/refs/heads/main/rate-all.sh"
+    "start.sh::https://raw.githubusercontent.com/theblu3j/birdutils/refs/heads/main/start.sh"
+    "winekill.sh::https://raw.githubusercontent.com/theblu3j/birdutils/refs/heads/main/winekill.sh"
+    "winepause.sh::https://raw.githubusercontent.com/theblu3j/birdutils/refs/heads/main/winepause.sh"
+    "wineresume.sh::https://raw.githubusercontent.com/theblu3j/birdutils/refs/heads/main/wineresume.sh"
+    "restartplasma.sh::https://raw.githubusercontent.com/theblu3j/birdutils/refs/heads/main/restartplasma.sh"
+    "center.sh::https://raw.githubusercontent.com/theblu3j/birdutils/refs/heads/main/center.sh"
+    "checkdeps.sh::https://raw.githubusercontent.com/theblu3j/birdutils/refs/heads/main/checkdeps.sh"
 )
 sha512sums=('637a13efd491d16ec8ae8247d4faa549862c79c1c0e6e3ce1c0bb2b6cb98776379dc9d803ccc56c8fcfc2af7fd82c74ca37c5d9bb82619245d5397a50b532b80'
             '3d0cec78912da92af712a0ee91cf4d98e63f44d8f972e8f93a023822b9a65909019b46937b8245c752a173a39159ea55c1d27999a16cc88accdd26852fe12401'
