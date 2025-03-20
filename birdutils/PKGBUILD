@@ -1,7 +1,7 @@
 # Maintainer: https://github.com/theblu3j
 
 pkgname=birdutils
-pkgver=0.4.1
+pkgver=0.4.2
 pkgrel=1
 pkgdesc='Personal bash scripts to do various things.'
 arch=('any')
@@ -43,7 +43,7 @@ package() {
     chmod +x "$pkgdir/usr/bin/center"
     install -Dm644 "$srcdir/checkdeps.sh" "$pkgdir/usr/bin/checkdeps"
     chmod +x "$pkgdir/usr/bin/checkdeps"
-    if pacman -Qq wine > /dev/null; then
+    if pacman -Qq wine > /dev/null | pacman -Qq steam > /dev/null | pacman -Qq umu-launcher > /dev/null; then
         install -Dm644 "$srcdir/winekill.sh" "$pkgdir/usr/bin/winekill"
         chmod +x "$pkgdir/usr/bin/winekill"
         install -Dm644 "$srcdir/winepause.sh" "$pkgdir/usr/bin/winepause"
