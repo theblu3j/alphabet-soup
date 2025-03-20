@@ -1,0 +1,20 @@
+# Maintainer: https://github.com/theblu3j
+
+pkgname=birdcall
+pkgver=0.1.0
+pkgrel=1
+pkgdesc='Bash script to combine mic output with an app output'
+arch=('any')
+url='https://github.com/theblu3j/birdcall'
+license=('GPL3')
+depends=('bash' 'gum' 'pipewire' 'pipewire-pulse')
+source=(
+    "birdcall.sh::https://raw.githubusercontent.com/theblu3j/birdcall/refs/heads/main/birdcall.sh"
+)
+sha512sums=('ba8a058df14a7297cbf1696d5d454f15d8962f23046d22f5f488a41974ceb5863938408db8a89af5b9483814c2e4ff603a92626e40e7d89b382e4a85807d17e8')
+package() {
+    mkdir -p "$pkgdir/usr/bin/"
+
+    install -Dm644 "$srcdir/birdcall.sh" "$pkgdir/usr/bin/birdcall"
+    chmod +x "$pkgdir/usr/bin/birdcall"
+}

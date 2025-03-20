@@ -2,12 +2,12 @@
 
 pkgname=tools.sh
 pkgver=0.4.0
-pkgrel=1
+pkgrel=2
 pkgdesc='Personal bash scripts to do various things.'
 arch=('any')
 url='https://github.com/theblu3j/tools.sh'
 license=('GPL3')
-depends=('bash' 'rate-mirrors')
+depends=('bash' 'rate-mirrors' 'fastfetch')
 optdepends=('plasma-desktop' 'wine')
 makedepends=()
 source=(
@@ -28,7 +28,7 @@ sha512sums=('637a13efd491d16ec8ae8247d4faa549862c79c1c0e6e3ce1c0bb2b6cb98776379d
             'fd1f4d6152dd60d56c49db90672dc54add692cebdeaecf4332d5b190533d50f4c0298feccc881149c31a6e55076ca1c77ba78299ae08be4638b8b8b4e95aed4f'
             '4363958c5ab20f98ae25be235e74680bf432a563d7ef80da2d770c0a2b58683a58b6f83e6249abb0b5141dd6e38d011a2d81333451ee16f861bede6490fe6450'
             '4a01a459cb9c9e70989d806d82cb371642a7649562b366002516effd82ebd41dc35eb86acb1347ef0af93502ac3c9ae2c99bc1e634b938b1997bfceec63b433f')
-options=()
+
 
 package() {
     mkdir -p "$pkgdir/usr/bin/"
