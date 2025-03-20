@@ -2,14 +2,14 @@
 
 pkgname=tools
 pkgver=0.4.0
-pkgrel=3
+pkgrel=4
 pkgdesc='Personal bash scripts to do various things.'
 arch=('any')
 url='https://github.com/theblu3j/tools'
 license=('GPL3')
 depends=('bash' 'rate-mirrors' 'fastfetch')
 optdepends=('plasma-desktop' 'wine')
-provides=('tools.sh')
+replaces=('tools.sh')
 conflicts=('rate-all')
 source=(
     "rate-all.sh::https://raw.githubusercontent.com/theblu3j/tools/refs/heads/main/rate-all.sh"
