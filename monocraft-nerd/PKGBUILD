@@ -11,7 +11,7 @@ provides=('ttf-font-nerd')
 groups=('nerd-fonts')
 source=("$url/releases/download/v$pkgver/Monocraft-nerd-fonts-patched.ttc")
 
-sha512sums=('95801bf21826bf8572af3787af82e77ee48df4bfb87e90c4317fcffbe7eaf037')
+sha512sums=('01201201eef9da886a938f422c1644cc68e75584681b575116c27e83e044086ce7649f8a1bc75a367803aa543c0be1e7fdd979c74aa24d30f150a4a729a57924')
 
 package() {
   install -Dm644 -t "$pkgdir/usr/share/fonts/Monocraft" Monocraft*.tt[cf]
