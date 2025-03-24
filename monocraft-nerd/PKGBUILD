@@ -1,0 +1,18 @@
+# Maintainer: https://github.com/theblu3j
+
+pkgname=monocraft-nerd
+pkgver=4.0
+pkgrel=1
+pkgdesc="A monospaced programming font inspired by the Minecraft typeface"
+url="https://github.com/IdreesInc/Monocraft"
+license=(OFL-1.1-RFN)
+arch=(any)
+provides=('ttf-font-nerd')
+groups=('nerd-fonts')
+source=("$url/releases/download/v$pkgver/Monocraft-nerd-fonts-patched.ttc")
+
+sha512sums=('95801bf21826bf8572af3787af82e77ee48df4bfb87e90c4317fcffbe7eaf037')
+
+package() {
+  install -Dm644 -t "$pkgdir/usr/share/fonts/Monocraft" Monocraft*.tt[cf]
+}
