@@ -12,7 +12,7 @@ source=(
     "dedupe.service::https://raw.githubusercontent.com/theblu3j/dedupe/refs/heads/main/dedupe.service"
 )
 provides=('dedupe')
-sha512sums=('9d7f612606ac64204c9bd646575d079fd67b9a5364ac008416dc94f2cb3a7cc6e11724c7e66e354421787a4b5680b94e06b2a812488850bd9d8e37f8ac28c795'
+sha512sums=('684d92eb405789da7776224cd109e2dd7b739c1c45b37b28900b5326f348cfa3a521f2581a1cca4116341deaf663fb308013fae6d3ff811c9805c20b4ae064f9'
             'ff97099a85a7495ee0eca6c7f8a802fc5bcb163afd45fce09a809b076240b6f15a16d246850655ee9d1f717b21a3eb417f7bec09dd162b08abef07157e8b50e3')
 package() {
     mkdir -p "$pkgdir/usr/lib/systemd/user/"
