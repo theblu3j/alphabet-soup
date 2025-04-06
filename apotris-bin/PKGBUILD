@@ -1,0 +1,42 @@
+# Maintainer: https://github.com/theblu3j
+_pkgname=apotris
+pkgname=$_pkgname-bin
+pkgver=4.0.2
+pkgrel=1
+pkgdesc="A block stacking puzzle game for the Game Boy Advance (Linux port)"
+arch=('x86_64')
+url="https://apotris.com/"
+license=('AGPL-3.0-only')
+depends=('bash' 'glibc' 'sdl2')
+makedepends=('imagemagick')
+provides=("$_pkgname=$pkgver")
+conflicts=('apotris-git' 'apotris')
+source=(
+	"$_pkgname.zip::https://apotrisstorage.blob.core.windows.net/binaries/Apotris-v4.0.2Linux-x64rev2.zip"
+)
+sha256sums=('214d70a068a5ededee58405c9cc8fa7a036d9a0f523e3bd4c1879c66cb7649fa')
+prepare() {
+	magick "$srcdir/assets/favicon32.bmp" "$srcdir/apotris.png"
+}
+package() {
+	cd "$srcdir/"
+	mkdir -p "$pkgdir/opt/apotris"
+	rm apotris.zip
+	# icon
+	mkdir -p "$pkgdir/usr/share/icons/hicolor/128x128/apps/"
+	install -m644 "apotris.png" "$pkgdir/usr/share/icons/hicolor/128x128/apps/apotris.png"
+	# when apotris is ran, it creats a save file in the directory it is ran from (???) so we have to create a save file in the game directory
+	# desktop file will set path to game directory, so sounds will get loaded and save gets loaded
+	touch "$pkgdir/opt/apotris/Apotris.sav"
+	chmod 666 "$pkgdir/opt/apotris/Apotris.sav"
+	install -dm755 "$pkgdir/opt/apotris"
+	cp -r "./" "$pkgdir/opt/apotris/"
+	mkdir -p "$pkgdir/usr/bin"
+	ln -s "/opt/$_pkgname/Apotris" "$pkgdir/usr/bin/$_pkgname"
+
+	# .desktop file
+	mkdir -p "$pkgdir/usr/share/applications"
+	touch "$pkgdir/usr/share/applications/apotris.desktop"
+	chmod 644 "$pkgdir/usr/share/applications/apotris.desktop"
+	echo -e "[Desktop Entry]\nExec=/opt/apotris/Apotris\nKeywords=Apotris\nName=Apotris\nNoDisplay=false\nPath=/opt/apotris/\nType=Application\nIcon=apotris" > $pkgdir/usr/share/applications/apotris.desktop
+}
