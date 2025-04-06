@@ -2,7 +2,7 @@
 _pkgname=apotris
 pkgname=$_pkgname-bin
 pkgver=4.0.2
-pkgrel=1
+pkgrel=2
 pkgdesc="A block stacking puzzle game for the Game Boy Advance (Linux port)"
 arch=('x86_64')
 url="https://apotris.com/"
@@ -39,4 +39,6 @@ package() {
 	touch "$pkgdir/usr/share/applications/apotris.desktop"
 	chmod 644 "$pkgdir/usr/share/applications/apotris.desktop"
 	echo -e "[Desktop Entry]\nExec=/opt/apotris/Apotris\nKeywords=Apotris\nName=Apotris\nNoDisplay=false\nPath=/opt/apotris/\nType=Application\nIcon=apotris" > $pkgdir/usr/share/applications/apotris.desktop
+
+	echo "--- Make sure to backup your save file before upgrading! Save file is located in /opt/apotris/Apotris.sav ---"
 }
