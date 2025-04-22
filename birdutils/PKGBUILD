@@ -2,7 +2,7 @@
 
 pkgname=birdutils
 pkgver=0.4.4
-pkgrel=1
+pkgrel=2
 pkgdesc='Personal bash scripts to do various things.'
 arch=('any')
 url='https://github.com/theblu3j/birdutils'
@@ -22,7 +22,7 @@ source=(
     "checkdeps.sh::https://raw.githubusercontent.com/theblu3j/birdutils/refs/heads/main/checkdeps.sh"
 )
 sha512sums=('637a13efd491d16ec8ae8247d4faa549862c79c1c0e6e3ce1c0bb2b6cb98776379dc9d803ccc56c8fcfc2af7fd82c74ca37c5d9bb82619245d5397a50b532b80'
-            'd29c1cf51e412c5fb9f555e87f23a32f4617b82785887e4194682d661048f469545166e9253b8bff483b6beb28efabfc08af6c2ac4a817de3047a235d6f01476'
+            'ee3ca0397597dcde52c828527605b122b8156195dcbc3253ebe45aa9ad1383c33d7d3f37e6a11c744d5c382e827615c197d64a07a64ba712b5ce182b517406fb'
             'b8b1d558a3f20196b1c949a40b39089508624edb771f103e51b4cd724aedcaf4745d9d9a5e5d0f795451667a833afff6b86f3c3aad24963e8799d2d8a87b7b95'
             'c809841e396297199a255c2948130b2fc43fb5f17ecbab0b67e53953b5c383b1ebc674a6992abe8bee9eb674decd05dd4a958fe2151588830161731ed890e478'
             '3af9903baad05fc989cf3d11ea71fa894502a72b9084f3ce8d317a269f3248e0692a22c73598980833898b3d3cb2af3ef917b79ad2a2b35085b203b9691858be'
