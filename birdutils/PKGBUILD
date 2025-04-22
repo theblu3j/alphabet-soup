@@ -1,7 +1,7 @@
 # Maintainer: https://github.com/theblu3j
 
 pkgname=birdutils
-pkgver=0.4.3
+pkgver=0.4.4
 pkgrel=1
 pkgdesc='Personal bash scripts to do various things.'
 arch=('any')
