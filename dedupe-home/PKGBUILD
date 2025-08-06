@@ -13,7 +13,7 @@ source=(
 )
 provides=('dedupe')
 sha512sums=('684d92eb405789da7776224cd109e2dd7b739c1c45b37b28900b5326f348cfa3a521f2581a1cca4116341deaf663fb308013fae6d3ff811c9805c20b4ae064f9'
-            'ff97099a85a7495ee0eca6c7f8a802fc5bcb163afd45fce09a809b076240b6f15a16d246850655ee9d1f717b21a3eb417f7bec09dd162b08abef07157e8b50e3')
+            'aab928f1a1b493678bb98d90518ee10345c67df72219c7eb9bc1225a28e67ab19ceb37d4216024ebad7c4e8359577f59fba8a1c041d59adc5f3700dad428c261')
 package() {
     mkdir -p "$pkgdir/usr/lib/systemd/user/"
     install -Dm644 "$srcdir/dedupe.timer" "$pkgdir/usr/lib/systemd/user/dedupe.timer"
