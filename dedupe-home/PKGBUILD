@@ -3,7 +3,7 @@
 
 pkgname=dedupe-home
 pkgver=0.3
-pkgrel=1
+pkgrel=2
 pkgdesc='Dedupes the home directory once a week, using duperemove'
 arch=('any')
 depends=('btrfs-progs' 'systemd' 'duperemove')
