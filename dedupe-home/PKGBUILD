@@ -2,7 +2,7 @@
 # Created mostly for personal usage.
 
 pkgname=dedupe-home
-pkgver=0.2
+pkgver=0.3
 pkgrel=1
 pkgdesc='Dedupes the home directory once a week, using duperemove'
 arch=('any')
