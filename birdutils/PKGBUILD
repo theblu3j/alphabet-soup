@@ -2,12 +2,12 @@
 
 pkgname=birdutils
 pkgver=0.4.6
-pkgrel=1
+pkgrel=2
 pkgdesc='Personal bash scripts to do various things.'
 arch=('any')
 url='https://github.com/theblu3j/birdutils'
 license=('GPL3')
-depends=('bash' 'rate-all' 'fastfetch')
+depends=('bash' 'fastfetch')
 optdepends=('plasma-desktop' 'wine' 'steam')
 conflicts=('rate-all')
 source=(
