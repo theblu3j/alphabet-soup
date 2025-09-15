@@ -2,14 +2,13 @@
 
 pkgname=birdutils
 pkgver=0.4.6
-pkgrel=2
+pkgrel=3
 pkgdesc='Personal bash scripts to do various things.'
 arch=('any')
 url='https://github.com/theblu3j/birdutils'
 license=('GPL3')
 depends=('bash' 'fastfetch')
 optdepends=('plasma-desktop' 'wine' 'steam')
-conflicts=('rate-all')
 source=(
     "start.sh::https://raw.githubusercontent.com/theblu3j/birdutils/refs/heads/main/start.sh"
     "winekill.sh::https://raw.githubusercontent.com/theblu3j/birdutils/refs/heads/main/winekill.sh"
