@@ -1,17 +1,16 @@
 # Maintainer: https://github.com/theblu3j
 
 pkgname=birdutils
-pkgver=0.4.5
+pkgver=0.4.6
 pkgrel=1
 pkgdesc='Personal bash scripts to do various things.'
 arch=('any')
 url='https://github.com/theblu3j/birdutils'
 license=('GPL3')
-depends=('bash' 'rate-mirrors' 'fastfetch')
+depends=('bash' 'rate-all' 'fastfetch')
 optdepends=('plasma-desktop' 'wine' 'steam')
 conflicts=('rate-all')
 source=(
-    "rate-all.sh::https://raw.githubusercontent.com/theblu3j/birdutils/refs/heads/main/rate-all.sh"
     "start.sh::https://raw.githubusercontent.com/theblu3j/birdutils/refs/heads/main/start.sh"
     "winekill.sh::https://raw.githubusercontent.com/theblu3j/birdutils/refs/heads/main/winekill.sh"
     "winepause.sh::https://raw.githubusercontent.com/theblu3j/birdutils/refs/heads/main/winepause.sh"
@@ -19,8 +18,7 @@ source=(
     "restartplasma.sh::https://raw.githubusercontent.com/theblu3j/birdutils/refs/heads/main/restartplasma.sh"
     "checkdeps.sh::https://raw.githubusercontent.com/theblu3j/birdutils/refs/heads/main/checkdeps.sh"
 )
-sha512sums=('2a026cb53c711841e36cc1adc36981574a8872da7b21ab234c793be709431221b33bc70795dffb0d5e8bcb8c2adf2dd3486f6539b16079c07602f85ef3a721b8'
-            'ee3ca0397597dcde52c828527605b122b8156195dcbc3253ebe45aa9ad1383c33d7d3f37e6a11c744d5c382e827615c197d64a07a64ba712b5ce182b517406fb'
+sha512sums=('ee3ca0397597dcde52c828527605b122b8156195dcbc3253ebe45aa9ad1383c33d7d3f37e6a11c744d5c382e827615c197d64a07a64ba712b5ce182b517406fb'
             'b8b1d558a3f20196b1c949a40b39089508624edb771f103e51b4cd724aedcaf4745d9d9a5e5d0f795451667a833afff6b86f3c3aad24963e8799d2d8a87b7b95'
             'c809841e396297199a255c2948130b2fc43fb5f17ecbab0b67e53953b5c383b1ebc674a6992abe8bee9eb674decd05dd4a958fe2151588830161731ed890e478'
             '3af9903baad05fc989cf3d11ea71fa894502a72b9084f3ce8d317a269f3248e0692a22c73598980833898b3d3cb2af3ef917b79ad2a2b35085b203b9691858be'
@@ -31,8 +29,6 @@ sha512sums=('2a026cb53c711841e36cc1adc36981574a8872da7b21ab234c793be709431221b33
 package() {
     mkdir -p "$pkgdir/usr/bin/"
 
-    install -Dm644 "$srcdir/rate-all.sh" "$pkgdir/usr/bin/rate-all"
-    chmod +x "$pkgdir/usr/bin/rate-all"
     install -Dm644 "$srcdir/start.sh" "$pkgdir/usr/bin/start"
     chmod +x "$pkgdir/usr/bin/start"
     install -Dm644 "$srcdir/checkdeps.sh" "$pkgdir/usr/bin/checkdeps"
