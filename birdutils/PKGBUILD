@@ -1,7 +1,7 @@
 # Maintainer: https://github.com/theblu3j
 
 pkgname=birdutils
-pkgver=0.4.4
+pkgver=0.4.5
 pkgrel=2
 pkgdesc='Personal bash scripts to do various things.'
 arch=('any')
@@ -9,8 +9,6 @@ url='https://github.com/theblu3j/birdutils'
 license=('GPL3')
 depends=('bash' 'rate-mirrors' 'fastfetch')
 optdepends=('plasma-desktop' 'wine' 'steam')
-replaces=('tools.sh')
-provides=('tools.sh')
 conflicts=('rate-all')
 source=(
     "rate-all.sh::https://raw.githubusercontent.com/theblu3j/birdutils/refs/heads/main/rate-all.sh"
@@ -21,7 +19,7 @@ source=(
     "restartplasma.sh::https://raw.githubusercontent.com/theblu3j/birdutils/refs/heads/main/restartplasma.sh"
     "checkdeps.sh::https://raw.githubusercontent.com/theblu3j/birdutils/refs/heads/main/checkdeps.sh"
 )
-sha512sums=('637a13efd491d16ec8ae8247d4faa549862c79c1c0e6e3ce1c0bb2b6cb98776379dc9d803ccc56c8fcfc2af7fd82c74ca37c5d9bb82619245d5397a50b532b80'
+sha512sums=('2a026cb53c711841e36cc1adc36981574a8872da7b21ab234c793be709431221b33bc70795dffb0d5e8bcb8c2adf2dd3486f6539b16079c07602f85ef3a721b8'
             'ee3ca0397597dcde52c828527605b122b8156195dcbc3253ebe45aa9ad1383c33d7d3f37e6a11c744d5c382e827615c197d64a07a64ba712b5ce182b517406fb'
             'b8b1d558a3f20196b1c949a40b39089508624edb771f103e51b4cd724aedcaf4745d9d9a5e5d0f795451667a833afff6b86f3c3aad24963e8799d2d8a87b7b95'
             'c809841e396297199a255c2948130b2fc43fb5f17ecbab0b67e53953b5c383b1ebc674a6992abe8bee9eb674decd05dd4a958fe2151588830161731ed890e478'
