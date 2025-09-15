@@ -1,7 +1,7 @@
 # Maintainer: https://github.com/theblu3j
 
 pkgname=rate-all
-pkgver=0.2
+pkgver=0.3
 pkgrel=1
 pkgdesc='Bash script to rate mirrors.'
 arch=('x86_64')
@@ -13,6 +13,6 @@ sha512sums=('2a026cb53c711841e36cc1adc36981574a8872da7b21ab234c793be709431221b33
 
 package() {
     mkdir -p "$pkgdir/usr/bin/"
-    install -Dm644 "$srcdir/rate-all.sh" "$pkgdir/usr/bin/rate-all.sh"
-    chmod +x "$pkgdir/usr/bin/rate-all.sh"
+    install -Dm644 "$srcdir/rate-all.sh" "$pkgdir/usr/bin/rate-all"
+    chmod +x "$pkgdir/usr/bin/rate-all"
 }
