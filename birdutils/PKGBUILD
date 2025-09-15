@@ -2,7 +2,7 @@
 
 pkgname=birdutils
 pkgver=0.4.5
-pkgrel=2
+pkgrel=1
 pkgdesc='Personal bash scripts to do various things.'
 arch=('any')
 url='https://github.com/theblu3j/birdutils'
