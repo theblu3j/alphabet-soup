@@ -1,18 +1,22 @@
 # Maintainer: https://github.com/theblu3j
 
 pkgname=rate-all
-pkgver=0.3
+pkgver=1.0
 pkgrel=1
 pkgdesc='Bash script to rate mirrors.'
 arch=('x86_64')
 url='https://github.com/theblu3j/rate-all'
 license=('GPL3')
-depends=('bash' 'rate-mirrors')
-source=("https://raw.githubusercontent.com/theblu3j/rate-all/refs/heads/main/rate-all.sh")
-sha512sums=('2a026cb53c711841e36cc1adc36981574a8872da7b21ab234c793be709431221b33bc70795dffb0d5e8bcb8c2adf2dd3486f6539b16079c07602f85ef3a721b8')
+depends=('sh' 'rate-mirrors' 'sed' 'gum' 'coreutils' 'grep' 'sudo' 'ncurses')
+source=("https://raw.githubusercontent.com/theblu3j/rate-all/refs/heads/main/rate-all.sh" "banned-mirrors.conf")
+sha512sums=('39e9043f7f19d807942ae67fddc7dc9ef58c49cf3b44f8f4c0d480fe4cff2455c2133be406ed15f3a79973da525d1b5b23a22bb9aea6f6926bfbf0a8e911ce55'
+            'aa9a835553053b09303e93faff7800b8dc796db18d27909f81cbdbcc445700e9c8639dd219804e35574f9e8b2a12feb6bce02cafacf10d97cb0896f5f5f10e2e')
 
 package() {
     mkdir -p "$pkgdir/usr/bin/"
     install -Dm644 "$srcdir/rate-all.sh" "$pkgdir/usr/bin/rate-all"
     chmod +x "$pkgdir/usr/bin/rate-all"
+
+    mkdir -p "$pkgdir/etc/rate-all/"
+    install -Dm644 "$srcdir/banned-mirrors.conf" "$pkgdir/etc/rate-all/banned-mirrors.conf"
 }
