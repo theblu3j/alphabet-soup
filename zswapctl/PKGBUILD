@@ -1,0 +1,14 @@
+# Maintainer: https://github.com/theblu3j
+
+pkgname=zswapctl
+pkgver=1.0
+pkgrel=1
+pkgdesc='Bash script to find size of arch packages'
+arch=('any')
+depends=('sh' 'bc' 'grep' 'coreutils')
+source=("zswapctl.sh")
+sha512sums=('2950899bfad8f13e09085ec3a87d10e52a30c1c27b0b4805c38c357b911d9a18abbd72d082ae19d515f0e3968d192c407649fbf107b81e4913311b074f2d496f')
+
+package() {
+    install -Dm755 "zswapctl.sh" "$pkgdir/usr/bin/zswapctl"
+}

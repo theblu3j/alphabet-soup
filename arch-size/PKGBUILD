@@ -1,0 +1,15 @@
+# Maintainer: https://github.com/theblu3j
+
+pkgname=arch-size
+pkgver=1.0
+pkgrel=1
+pkgdesc='Bash script to find size of arch packages'
+arch=('any')
+url='https://github.com/theblu3j/rate-all'
+depends=('sh' 'expac' 'libqalculate')
+source=("arch-size.sh")
+sha512sums=('c6904cb5284c26da257de0444d4764668233e9107e7aec25345fcfcd9647e4b64012f7b78754a42754a59e1863b64e738b214f3e071ae159cee3adeaef1f6276')
+
+package() {
+    install -Dm755 "arch-size.sh" "$pkgdir/usr/bin/arch-size"
+}
